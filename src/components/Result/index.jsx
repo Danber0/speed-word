@@ -1,15 +1,15 @@
-import React from 'react';
+import React from "react";
 
 export const Result = ({ stats }) => {
   return (
     <div className="flex result">
       <div className="result__top-icon">😓</div>
       <p className="result__phrase">
-        Неплохо! За <b>20 секунд</b>, ты ввел:
+        Not bad! <b>{20 - stats.sec} seconds</b>, your input:
       </p>
-      <div className="result__number-of-words">{stats.words} слов</div>
+      <div className="result__number-of-words">{stats.words} words</div>
       <button className="button" onClick={() => window.location.reload()}>
-        🤔 Попробовать снова?
+        🤔 Again?
       </button>
     </div>
   );
